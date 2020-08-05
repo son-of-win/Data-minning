@@ -4,13 +4,13 @@ import json
 class vnexpress(scrapy.Spider):
     name = 'phimmoi'
     start_urls = ['http://www.phimmoizz.net/phim/mat-troi-chim-day-bien-2020-11193/']
-    history = set()
-    count_response= 0
+    history = set()  # set để lưu các link đã đi qua dảm bảo ko lặp lại link 2 lần
+    count_response= 0  # biến đếm số lượng response đc
     def parse(self,response):
         if (response.url not in self.history) and self.count_response <= 200:
             f = open('C:/Users/huuvuot/Desktop/scrapy/result/phimmoi.json','a+',encoding='utf-8')
 
-            self.history.add(response.url)
+            self.history.add(response.url)   # add link hiện tại vào set history
             key = response.css("dt.movie-dt::text").extract()
             value = response.css("dd.movie-dd::text").extract()
             description = {x:y for x,y in zip(key, value)}
@@ -26,7 +26,7 @@ class vnexpress(scrapy.Spider):
             }
 
 
-            json.dump(data,f,ensure_ascii=False)
+            json.dump(data,f,ensure_ascii=False)  # ghi dữ liệu vào file json
             f.write('\n')
             self.count_response = self.count_response + 1
 

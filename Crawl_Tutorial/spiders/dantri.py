@@ -15,12 +15,13 @@ class Sendo(scrapy.Spider):
             title = response.css("h1.dt-news__title::text").get().strip()
             dateTime = response.css("span.dt-news__time::text").get()
             author = response.css("div.dt-news__content strong::text").get()
-
+            tag = response.css("ul.dt-breadcrumb a::text").extract()
 
 
             f.write(title + '\n')
             f.write(dateTime + '\n')
             f.write(author + '\n')
+            f.write(tag + '\n')
             f.write('_' * 100 + '\n')
             self.count_response = self.count_response + 1
             # get next link

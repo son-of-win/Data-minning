@@ -10,3 +10,5 @@ code in KTlab
 + các kết quả được lưu trong file result
 + phimmoi : lấy được dữ liệu của 200 bộ phim
 + dantri : lấy dữ liệu của 8331 bài viết
+# chạy code
++ chạy file run_crawler.py để bắt đầu crawl

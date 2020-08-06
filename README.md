@@ -7,7 +7,7 @@ code in KTlab
 + crawl dữ liệu các bộ phim trên trang [phimmoizz](http://www.phimmoizz.net/) vào file json
 + thông tin các bộ phim gồm : thể loại , số tập, tóm tắt phim, link xem phim, keyword, thông tin chi tiết của phim
 # amazone.py
-+crawl duex liệu các thông tin sản phẩm trên trang [amazone](https://www.amazon.com/) vào file json
++ crawl dữ liệu các thông tin sản phẩm trên trang [amazone](https://www.amazon.com/) vào file json
 + thông tin của sản phẩm gồm: tên sản phẩm, giá , phí ship, rate, customer_reply, description
 # result
 + các kết quả được lưu trong file result

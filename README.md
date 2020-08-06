@@ -6,9 +6,13 @@ code in KTlab
 # phimmoi.py
 + crawl dữ liệu các bộ phim trên trang [phimmoizz](http://www.phimmoizz.net/) vào file json
 + thông tin các bộ phim gồm : thể loại , số tập, tóm tắt phim, link xem phim, keyword, thông tin chi tiết của phim
+# amazone.py
++crawl duex liệu các thông tin sản phẩm trên trang [amazone](https://www.amazon.com/) vào file json
++ thông tin của sản phẩm gồm: tên sản phẩm, giá , phí ship, rate, customer_reply, description
 # result
 + các kết quả được lưu trong file result
 + phimmoi : lấy được dữ liệu của 200 bộ phim
 + dantri : lấy dữ liệu của 8331 bài viết
++ amazone :lấy dữ liệu của 200 sản phẩm
 # chạy code
 + chạy file run_crawler.py để bắt đầu crawl
